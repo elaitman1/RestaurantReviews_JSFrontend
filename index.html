@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
-    <title>AlwaysNote</title>
-    <script src="src/index.js" charset="utf-8"></script>
+    <title>Restaurant Reviews</title>
+    <link href="./index.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" >
+    <script src="src/index.js" charset="utf-8">
+
+    </script>
   </head>
   <body>
+    <div class="ui grid">
 
-  </body>
+    <!-- <div class='row'> -->
+
+      <div class="five wide column">
+       <!-- <div class='col-md-4'> -->
+         <h1>Restaurants Reviewed</h1>
+         <ul class="list-group" id="list-group">
+         </ul>
+         <br>
+         <button class="blue back ui button">Back</button>
+         <button class="blue next ui button">Next</button>
+       </div>
+
+
+       <div class="five wide column">
+       <!-- <div class='col-md-8'> -->
+         <h1>Restaurant Detail</h1>
+         <div id="restaurant-detail">
+       </div>
+     </div>
+
+
+  <div class="five wide column">
+     <!-- <div class='col-md-12'> -->
+       <h1>New Review</h1>
+    <form class="ui form">
+      <div class="field">
+        <label><h3>Restaurant Name<h3></label>
+        <input  type="text" id="restaurant-name-input" placeholder="Restaurant Name">
+      </div>
+      <div class="field">
+        <label><h3>Food Type<h3></label>
+        <input type="text" id="food-type-input" placeholder="Food Type">
+      </div>
+      <div class="field">
+        <label><h3>Location<h3></label>
+        <input type="text" id="location-input" placeholder="Location">
+      </div>
+      <div class="field">
+        <label><h3>Full Bar<h3></label>
+        <input type="text" id="full-bar-input" placeholder="True/False">
+      </div>
+      <div class="field">
+      <label><h3>Image<h3></label>
+      <input type="text" id="image-input" placeholder="Image URL">
+      </div>
+      <button class="blue ui input button" type="submit">Create New Review</button>
+    </form>
+  </div>
+</div>
+
+</body>
 </html>
