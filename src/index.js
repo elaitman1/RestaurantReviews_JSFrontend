@@ -8,7 +8,7 @@ const leftHandListOfNames = document.querySelector('.list-group')
 
 
   function fetchRestaurants() {
-    fetch(`https://restaurantreviewsbackend.herokuapp.com/api/v1/restaurants?limit=25&page=${page}`)
+    fetch(`https://localhost:3000/api/v1/restaurants?limit=25&page=${page}`)
       .then(r=>r.json())
       .then(r=>{
         console.log(r)
@@ -105,7 +105,7 @@ const leftHandListOfNames = document.querySelector('.list-group')
       })
 
       allRestaurants.splice(index, 1)
-        fetch(`https://restaurantreviewsbackend.herokuapp.com/api/v1/restaurants/${clickedId}`,{method: 'DELETE'})
+        fetch(`https://localhost:3000/api/v1/restaurants/${clickedId}`,{method: 'DELETE'})
           .then(r=>r.json())
           .then(r=>{
             fetchRestaurants()
@@ -119,7 +119,7 @@ const leftHandListOfNames = document.querySelector('.list-group')
       let clickedId = parseInt(e.target.dataset.id)
       let clickedKey = e.target.dataset.key
 
-    fetch(`https://restaurantreviewsbackend.herokuapp.com/api/v1/restaurants/${clickedId}`,
+    fetch(`https://localhost:3000/api/v1/restaurants/${clickedId}`,
       { method: 'PATCH',
       headers: {
         "Content-Type": "application/json",
@@ -131,7 +131,7 @@ const leftHandListOfNames = document.querySelector('.list-group')
     })
     .then(r => r.json())
     .then(r =>{
-      fetch(`https://restaurantreviewsbackend.herokuapp.com/api/v1/restaurants?limit=25&page=${page}`)
+      fetch(`https://localhost:3000/api/v1/restaurants?limit=25&page=${page}`)
 
           let foundRestaurant = r
 
@@ -161,7 +161,7 @@ const leftHandListOfNames = document.querySelector('.list-group')
       let barInput = document.querySelector('#full-bar-input').value
       let imageInput = document.querySelector('#image-input').value
 
-        fetch(`https://restaurantreviewsbackend.herokuapp.com/api/v1/restaurants`, {method: 'POST',
+        fetch(`https://localhost:3000/api/v1/restaurants`, {method: 'POST',
           headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
